@@ -28,4 +28,5 @@ public partial class BestSellingProductsView : ContentPage
             bindingContext.OnDisappearing();
         }
     }
+
 }
