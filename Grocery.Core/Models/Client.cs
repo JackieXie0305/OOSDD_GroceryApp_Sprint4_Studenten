@@ -11,8 +11,8 @@ namespace Grocery.Core.Models
         public Client(int id, string name, string emailAddress, string password, Role role = Role.None)
             : base(id, name)
         {
-            EmailAddress = emailAddress;
-            Password = password;
+            EmailAddress = emailAddress ?? throw new ArgumentNullException(nameof(emailAddress));
+            Password = password ?? throw new ArgumentNullException(nameof(password));
             Role = role;
         }
     }

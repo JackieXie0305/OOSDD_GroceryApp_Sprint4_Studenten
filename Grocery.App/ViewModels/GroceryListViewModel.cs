@@ -35,5 +35,16 @@ namespace Grocery.App.ViewModels
             base.OnDisappearing();
             GroceryLists.Clear();
         }
+
+        public Client? Client { get; set; }
+
+        [RelayCommand]
+        public async Task ShowBoughtProducts()
+        {
+            if (Client?.Role == Role.Admin)
+            {
+                await Shell.Current.GoToAsync("BoughtProductsView");
+            }
+        }
     }
 }
