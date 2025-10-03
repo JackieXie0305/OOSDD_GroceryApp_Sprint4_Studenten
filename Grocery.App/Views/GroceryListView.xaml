@@ -1,0 +1,1 @@
+<ToolbarItem Text="{Binding Client.Name}" Command="{Binding ShowBoughtProductsCommand}" />
