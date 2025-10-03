@@ -1,5 +1,6 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
+using Grocery.App.Views;
 using Grocery.Core.Interfaces.Services;
 using Grocery.Core.Models;
 using System.Collections.ObjectModel;
@@ -43,7 +44,7 @@ namespace Grocery.App.ViewModels
         {
             if (Client?.Role == Role.Admin)
             {
-                await Shell.Current.GoToAsync("BoughtProductsView");
+                await Shell.Current.GoToAsync(nameof(BoughtProductsView));
             }
         }
     }
