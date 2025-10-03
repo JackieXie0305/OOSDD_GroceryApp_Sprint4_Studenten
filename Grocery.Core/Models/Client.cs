@@ -2,7 +2,7 @@
 
 namespace Grocery.Core.Models
 {
-    public partial class Client : Model
+    public class Client : Model
     {
         public string EmailAddress { get; set; }
         public string Password { get; set; }
